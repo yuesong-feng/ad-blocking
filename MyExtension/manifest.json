@@ -3,12 +3,9 @@
   "manifest_version": 2,
   "version": "1.0",
   "description": "Chrome去广告插件",
-  "browser_action": {
-
-  },
   "content_scripts": [
     {
-      "matches": ["https://www.google.com/*","https://www.baidu.com/*"],
+      "matches": ["https://*/*"],
       "js": ["script.js"]
     }
   ]
