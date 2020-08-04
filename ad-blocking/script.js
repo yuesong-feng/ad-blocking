@@ -7,6 +7,9 @@ switch(url){
         for(i=0;i<adds.length;i++){
             adds[i].style.opacity=adds_opacity;
         }
+        document.getElementById("taw").style.opacity=adds_opacity;
+        document.getElementById("bottomads").style.opacity=adds_opacity;
+
     break;
 
     case "www.baidu.com":
