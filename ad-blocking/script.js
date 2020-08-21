@@ -4,12 +4,16 @@ switch(url){
 
     case "www.google.com":
         var adds = document.getElementsByClassName("ads-ad");
-        for(i=0;i<adds.length;i++){
+        for(let i=0;i<adds.length;i++){
             adds[i].style.opacity=adds_opacity;
         }
-        document.getElementById("taw").style.opacity=adds_opacity;
-        document.getElementById("bottomads").style.opacity=adds_opacity;
+        if(document.getElementById("taw")!=null){
+            document.getElementById("taw").style.opacity=adds_opacity;
+        }
+        if(document.getElementById("bottomads")!=null){
+            document.getElementById("bottomads").style.opacity=adds_opacity;
 
+        }
     break;
 
     case "www.baidu.com":
@@ -23,6 +27,13 @@ switch(url){
     case "www.youtube.com":
         if(document.getElementById("player-ads")!=null){
             document.getElementById("player-ads").style.opacity=adds_opacity;
+        }
+    break;
+
+    case "www.bbc.com":
+        var adds = document.getElementsByClassName("nw-c-advert");
+        for(let i=0;i<adds.length;i++){
+            adds[i].style.opacity=adds_opacity;
         }
     break;
 }
