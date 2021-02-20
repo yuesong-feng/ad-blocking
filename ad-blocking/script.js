@@ -1,4 +1,4 @@
-var adds_opacity = 0.3;
+var adds_opacity = 0.3;     // 广告透明度
 var url = window.location.host;
 switch (url) {
 
@@ -7,9 +7,11 @@ switch (url) {
         for (let i = 0; i < adds.length; i++) {
             adds[i].style.opacity = adds_opacity;
         }
+        // 顶部广告
         if (document.getElementById("taw") != null) {
             document.getElementById("taw").style.opacity = adds_opacity;
         }
+        // 底部广告
         if (document.getElementById("bottomads") != null) {
             document.getElementById("bottomads").style.opacity = adds_opacity;
         }
@@ -30,6 +32,7 @@ switch (url) {
         break;
 
     case "www.youtube.com":
+        // 视频播放界面右侧上方广告（竖屏时在播放器下方）
         if (document.getElementById("player-ads") != null) {
             document.getElementById("player-ads").style.opacity = adds_opacity;
         }
