@@ -16,10 +16,16 @@ switch (url) {
         break;
 
     case "www.baidu.com":
+        // 前五项广告
         var id = 3001;
         while (document.getElementById(String(id)) != null) {
             document.getElementById(String(id)).style.opacity = adds_opacity;
             id++;
+        }
+        
+        // 右侧广告
+        if (document.getElementById("zsyx_im0") != null) {
+            document.getElementById("zsyx_im0").style.opacity = adds_opacity;
         }
         break;
 
