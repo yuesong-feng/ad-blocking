@@ -7,10 +7,12 @@ switch (url) {
         for (let i = 0; i < adds.length; i++) {
             adds[i].style.opacity = adds_opacity;
         }
+
         // 顶部广告
         if (document.getElementById("taw") != null) {
             document.getElementById("taw").style.opacity = adds_opacity;
         }
+
         // 底部广告
         if (document.getElementById("bottomads") != null) {
             document.getElementById("bottomads").style.opacity = adds_opacity;
@@ -18,23 +20,38 @@ switch (url) {
         break;
 
     case "www.baidu.com":
-        // 前五项广告
+        var href = window.location.href;
+        // 顶部广告
         var id = 3001;
         while (document.getElementById(String(id)) != null) {
             document.getElementById(String(id)).style.opacity = adds_opacity;
             id++;
         }
-        
+
+        // 底部广告
+        id = 5001;
+        while (document.getElementById(String(id)) != null) {
+            document.getElementById(String(id)).style.opacity = adds_opacity;
+            id++;
+        }
+
         // 右侧广告
         if (document.getElementById("zsyx_im0") != null) {
             document.getElementById("zsyx_im0").style.opacity = adds_opacity;
         }
+
+        // 解决百度搜索局部刷新
         break;
 
     case "www.youtube.com":
         // 视频播放界面右侧上方广告（竖屏时在播放器下方）
         if (document.getElementById("player-ads") != null) {
             document.getElementById("player-ads").style.opacity = adds_opacity;
+        }
+
+        var adds = document.getElementsByClassName("ytd-display-ad-renderer");
+        for (let i = 0; i < adds.length; i++) {
+            adds[i].style.opacity = adds_opacity;
         }
         break;
 
